@@ -1,4 +1,4 @@
-# A Lightweight and Robust Framework for Label Noise Mitigation in Centralized and Federated Learning
+# A Lightweight and Robust Framework for Label Noise Mitigation in Deep Learning
 
 ## Requirements
  - see requirements.txt
