@@ -54,7 +54,7 @@ resume_mode: 0
 # other
 save_format: pdf
 # ying
-subset_ratio: 0.01
+subset_ratio: -1
 noisy_ratio: 0.3
 noise_mode: 'sym'
 sampling_epoch: 0
