@@ -1,0 +1,71 @@
+---
+# control
+control:
+  fed: '1'
+  num_users: '5' #100
+  frac: '1' #0.1
+  data_split_mode: 'non-iid-2'  # iid
+  model_split_mode: 'fix'
+  model_mode: 'a1'
+  norm: 'bn'
+  scale: '1'
+  mask: '1'
+# data
+data_name: CIFAR10
+subset: label
+batch_size:
+  train: 128
+  test: 128
+shuffle:
+  train: True
+  test: False
+num_workers: 0
+model_name: resnet18 # resnet18 conv
+metric_name:
+  train:
+    - Loss
+    - Accuracy
+  test:
+    - Loss
+    - Accuracy
+# optimizer
+optimizer_name: Adam
+lr: 3.0e-4
+momentum: 0.9
+weight_decay: 5.0e-4
+# scheduler
+scheduler_name: None
+step_size: 1
+milestones:
+  - 100
+  - 150
+patience: 10
+threshold: 1.0e-3
+factor: 0.5
+min_lr: 1.0e-2  #1.0e-4
+# experiment
+init_seed: 0
+num_experiments: 1
+num_epochs: 200
+log_interval: 0.25
+device: cpu # cuda
+world_size: 1
+resume_mode: 0
+# other
+save_format: pdf
+# ying
+subset_ratio: 0.01
+noisy_ratio: 0.3
+noise_mode: 'sym'
+sampling_epoch: 0
+window_length: 5  # control the historical window
+variance_window: 2  # control the gap window
+starting_percent: 1  # 0.5
+increase: 1 # 1.5
+step_length: 20
+token: 1
+level_n_system: 0.4
+level_n_lowerb: 0.5
+seed: 1
+non_iid_prob_class: 0.7
+alpha_dirichlet: 0.5
